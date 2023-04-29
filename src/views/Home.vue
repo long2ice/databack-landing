@@ -1,5 +1,5 @@
 <template>
-  <Navbar />
+  <Navbar :on-theme-change="onThemeChange" />
   <div class="flex-1 flex justify-center items-center gap-20">
     <div class="w-[40%] flex flex-col gap-10">
       <div class="text-6xl font-bold text-blue-500">
@@ -27,11 +27,20 @@
       </div>
     </div>
     <div class="w-[60%]">
-      <img src="/screenshot.png" class="rounded-md shadow-md" alt="home" />
+      <img :src="screenshot" class="rounded-md shadow-md" alt="home" />
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue'
+import { ref } from 'vue'
+const onThemeChange = (mode: boolean) => {
+  if (!mode) {
+    screenshot.value = '/screenshot-light.png'
+  } else {
+    screenshot.value = '/screenshot-dark.png'
+  }
+}
+const screenshot = ref()
 </script>
 <style scoped></style>

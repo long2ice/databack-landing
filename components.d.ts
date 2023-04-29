@@ -11,7 +11,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AkGithubFill: typeof import('@kalimahapps/vue-icons/ak')['AkGithubFill']
     CoMoon: typeof import('@kalimahapps/vue-icons/co')['CoMoon']
-    Footer: typeof import('./src/components/Footer.vue')['default']
     MdOutlinedWbSunny: typeof import('@kalimahapps/vue-icons/md')['MdOutlinedWbSunny']
     Navbar: typeof import('./src/components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -11,9 +11,9 @@
       </ul>
     </div>
     <div class="navbar-end">
-      <button class="btn-ghost btn-circle btn">
+      <button class="btn-ghost btn">
         <label class="swap-rotate swap">
-          <input type="checkbox" data-toggle-theme="light,dark" />
+          <input type="checkbox" data-toggle-theme="light,dark" v-model="mode" />
           <MdOutlinedWbSunny class="swap-off text-2xl" />
           <CoMoon class="swap-on text-2xl" />
         </label>
@@ -31,10 +31,20 @@
 
 <style scoped></style>
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { themeChange } from 'theme-change'
-
+const mode = ref(false)
+const props = defineProps({
+  onThemeChange: {
+    type: Function,
+    required: true
+  }
+})
 onMounted(() => {
-  themeChange(false)
+  themeChange(mode.value)
+  props.onThemeChange(mode.value)
+})
+watch(mode, (value) => {
+  props.onThemeChange(value)
 })
 </script>
