@@ -5,8 +5,8 @@
     </div>
     <div class="navbar-center font-bold">
       <ul class="menu menu-horizontal px-1">
-        <li><a href="https://docs.databack.dev" target="_blank">Documentation (writing)</a></li>
         <li><a>Pricing</a></li>
+        <li><a href="https://docs.databack.dev" target="_blank">Documentation (writing)</a></li>
         <li><a href="mailto:long2ice@gmail.com">Contact</a></li>
       </ul>
     </div>
@@ -18,13 +18,7 @@
           <CoMoon class="swap-on text-2xl" />
         </label>
       </button>
-      <a
-        href="https://github.com/long2ice/databack.git"
-        target="_blank"
-        class="btn btn-ghost text-2xl"
-      >
-        <AkGithubFill />
-      </a>
+      <a class="btn" href="https://docs.databack.dev">Get started</a>
     </div>
   </div>
 </template>

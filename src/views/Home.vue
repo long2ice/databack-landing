@@ -8,7 +8,7 @@
       <div class="text-xl text-gray-400">
         Support backup MySQL/PostgreSQL/Redis/MongoDB to any S3 compatible storages
       </div>
-      <div class="flex gap-4">
+      <div class="flex gap-2">
         <a
           href="https://github.com/long2ice/databack.git"
           target="_blank"
@@ -18,11 +18,20 @@
           View on Github
         </a>
         <a
+          href="https://demo.databack.dev"
+          target="_blank"
+          class="flex border p-3 items-center gap-2 rounded-md hover:bg-gray-100"
+        >
+          <AnFilledHeart class="text-pink-500" />
+          Try the demo
+        </a>
+        <a
           href="https://pro.databack.dev/login"
           target="_blank"
           class="flex border p-3 items-center gap-2 rounded-md hover:bg-gray-100"
         >
-          Book a demo
+          <McVip1Fill class="text-orange-500" />
+          Try the pro version
         </a>
       </div>
     </div>
